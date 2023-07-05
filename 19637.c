@@ -1,4 +1,4 @@
-//19637  IFπÆ ¡ª ¥ÎΩ≈ Ω·¡‡
+//19637  IFÎ¨∏ Ï¢Ä ÎåÄÏã† Ïç®Ï§ò
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
@@ -45,7 +45,7 @@ int main() {
     for (int i = 0; i < m; i++) {
         scanf("%d", &keys[i]);
         if (n == 1)
-            strcpy(outputs[i], levName[0]); // ¿Ã∞Õ ∂ßπÆø° ∑±≈∏¿” ø¿∑˘≥≤
+            strcpy(outputs[i], levName[0]); // Ïù¥Í≤É ÎïåÎ¨∏Ïóê Îü∞ÌÉÄÏûÑ Ïò§Î•òÎÇ®
         else
             strcpy(outputs[i], levName[bin_search_recursion(keys[i], arr, 0, n - 1)]);
     }
