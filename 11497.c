@@ -8,8 +8,7 @@ int max = -1;
 
 int countMax(int arr[], int size) {
     int m = -1;
-    int sub;
-    int tmp;
+    int sub, tmp;
     for (int i = 0; i < size - 1; i++) {
         tmp = arr[i + 1] - arr[i];
         sub = (tmp < 0) ? tmp * (-1) : tmp;
