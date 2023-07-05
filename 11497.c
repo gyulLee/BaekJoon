@@ -1,4 +1,4 @@
-//11497 Åë³ª¹« °Ç³Ê¶Ù±â
+//11497 í†µë‚˜ë¬´ ê±´ë„ˆë›°ê¸°
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
@@ -18,14 +18,14 @@ int countMax(int arr[], int size) {
     return m;
 }
 
-int partition(int* A, int s, int e) { // pivotÀ» ±âÁØÀ¸·Î ÀÛÀº ¼ö¸¦ ¿ŞÂÊ, Å« ¼ö¸¦ ¿À¸¥ÂÊ
+int partition(int* A, int s, int e) { // pivotì„ ê¸°ì¤€ìœ¼ë¡œ ì‘ì€ ìˆ˜ë¥¼ ì™¼ìª½, í° ìˆ˜ë¥¼ ì˜¤ë¥¸ìª½
     int i, j;
     int t;
 
     i = s - 1;
     for (j = s; j < e; j++) {
         if (A[j] < A[e]) { // A[e] : pivot
-            i++; // i: pivotº¸´Ù ÀÛÀº elementÀÇ °³¼ö¸¦ ¾Ë·ÁÁÖ´Â ¿ªÇÒ
+            i++; // i: pivotë³´ë‹¤ ì‘ì€ elementì˜ ê°œìˆ˜ë¥¼ ì•Œë ¤ì£¼ëŠ” ì—­í• 
             //A[i] <-> A[j]
             t = A[i];
             A[i] = A[j];
@@ -33,17 +33,17 @@ int partition(int* A, int s, int e) { // pivotÀ» ±âÁØÀ¸·Î ÀÛÀº ¼ö¸¦ ¿ŞÂÊ, Å« ¼ö¸
         }
     }
 
-    //¿©±â±îÁö i´Â pivotº¸´Ù ÀÛÀº ¼ıÀÚÀÇ °³¼ö¸¦ ¾Ë·ÁÁÜ
-    i++; // ¿©±â¼­ ÇÏ³ª ´õÇÏ¸é pivotÀÌ °¥ ÀÎµ¦½º°¡ µÈ´Ù
+    //ì—¬ê¸°ê¹Œì§€ iëŠ” pivotë³´ë‹¤ ì‘ì€ ìˆ«ìì˜ ê°œìˆ˜ë¥¼ ì•Œë ¤ì¤Œ
+    i++; // ì—¬ê¸°ì„œ í•˜ë‚˜ ë”í•˜ë©´ pivotì´ ê°ˆ ì¸ë±ìŠ¤ê°€ ëœë‹¤
     t = A[i];
     A[i] = A[e];
     A[e] = t;
-    return i; // pivotÀÌ °á·ĞÀûÀ¸·Î À§Ä¡ÇÑ ÀÎµ¦½º ¹İÈ¯
+    return i; // pivotì´ ê²°ë¡ ì ìœ¼ë¡œ ìœ„ì¹˜í•œ ì¸ë±ìŠ¤ ë°˜í™˜
 }
 
 void quickSort(int* A, int p, int r) {
-    if (p < r) { // p¶û rÀÌ °°°Å³ª p°¡ ´õ Ä¿Áö¸é ¾Æ¹«°Íµµ ÇÏÁö ¾Ê´Â´Ù.
-        int q = partition(A, p, r); // pivotÀÌ À§Ä¡ÇÑ ÀÎµ¦½º
+    if (p < r) { // pë‘ rì´ ê°™ê±°ë‚˜ pê°€ ë” ì»¤ì§€ë©´ ì•„ë¬´ê²ƒë„ í•˜ì§€ ì•ŠëŠ”ë‹¤.
+        int q = partition(A, p, r); // pivotì´ ìœ„ì¹˜í•œ ì¸ë±ìŠ¤
         quickSort(A, p, q - 1);
         quickSort(A, q + 1, r);
     }
@@ -62,7 +62,7 @@ int main() {
         int* A2 = (int*)malloc(sizeof(int) * (m / 2));
         for (int j = 0; j < m; j++)
             scanf("%d", &A[j]);
-        if (m % 2 == 0) { // Â¦¼öÀÏ¶§
+        if (m % 2 == 0) { // ì§ìˆ˜ì¼ë•Œ
             quickSort(A, 0, m - 1);
             int top = A[m - 1];
             int a = top - A[m - 2];
@@ -87,7 +87,7 @@ int main() {
             //printf("%d", max);
             r[ri++] = max;
         }
-        else { // È¦¼öÀÏ¶§
+        else { // í™€ìˆ˜ì¼ë•Œ
             quickSort(A, 0, m - 1);
             int top = A[m - 1];
             int a = top - A[m - 2];
