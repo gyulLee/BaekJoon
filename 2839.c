@@ -1,4 +1,4 @@
-//2839 º≥≈¡ πË¥ﬁ
+//2839
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
