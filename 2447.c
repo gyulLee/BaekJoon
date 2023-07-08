@@ -1,4 +1,4 @@
-//2447 별찍기 - 재귀함수
+//2447 蹂꾩컢湲�
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
