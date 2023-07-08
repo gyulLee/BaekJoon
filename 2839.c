@@ -1,4 +1,4 @@
-//2839 BABBA
+//2839 설탕 배달
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
